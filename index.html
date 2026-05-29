@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Sivaranjani ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Dancing+Script:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================
+       LOADING SCREEN
+  ============================================================ -->
+  <div id="loading-screen">
+    <div class="loading-bg-hearts" id="loadingHeartsContainer"></div>
+    <div class="loading-sparkles" id="loadingSparkles"></div>
+    <div class="loading-content">
+      <div class="loading-icon">💖</div>
+      <h2 class="loading-title">Preparing Something Special</h2>
+      <p class="loading-subtitle">For <span class="name-glow">Sivaranjani</span> ❤️</p>
+      <div class="loading-bar-wrap">
+        <div class="loading-bar" id="loadingBar"></div>
+      </div>
+      <p class="loading-percent" id="loadingPercent">0%</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FLOATING GLOBAL HEARTS (background layer)
+  ============================================================ -->
+  <div class="global-hearts" id="globalHearts"></div>
+  <canvas id="sparkleCanvas"></canvas>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section id="hero" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">✨ A Special Gift For You ✨</div>
+      <h1 class="hero-title">
+        <span class="hero-happy">Happy Birthday</span>
+        <span class="hero-name">Sivaranjani</span>
+        <span class="hero-heart">❤️</span>
+      </h1>
+      <p class="hero-from">Made With Love By <em>Guru Shankar</em></p>
+      <blockquote class="hero-quote">
+        "Some people make the world beautiful<br>just by being in it.<br>
+        <strong>You are one of them.</strong>"
+      </blockquote>
+      <a href="#countdown" class="hero-btn glow-btn" id="beginBtn">
+        Begin The Surprise ✨
+      </a>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       COUNTDOWN
+  ============================================================ -->
+  <section id="countdown" class="section countdown-section">
+    <div class="section-deco top-deco">🌸</div>
+    <div class="container">
+      <h2 class="section-title">Counting Down To Your Special Day</h2>
+      <p class="section-sub">June 8th — The Day You Were Born 🎂</p>
+      <div class="countdown-grid" id="countdownGrid">
+        <div class="countdown-card">
+          <span class="cd-num" id="cd-days">00</span>
+          <span class="cd-label">Days</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-card">
+          <span class="cd-num" id="cd-hours">00</span>
+          <span class="cd-label">Hours</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-card">
+          <span class="cd-num" id="cd-mins">00</span>
+          <span class="cd-label">Minutes</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-card">
+          <span class="cd-num" id="cd-secs">00</span>
+          <span class="cd-label">Seconds</span>
+        </div>
+      </div>
+      <!-- Shown when birthday arrives -->
+      <div class="birthday-now" id="birthdayNow" style="display:none;">
+        <div class="bday-emoji">🎂</div>
+        <h2>Happy Birthday Sivaranjani! 🎂</h2>
+        <p>Today is all about you ❤️</p>
+      </div>
+    </div>
+    <div class="section-deco bottom-deco">🌸</div>
+  </section>
+
+  <!-- ============================================================
+       WELCOME MESSAGE
+  ============================================================ -->
+  <section id="welcome" class="section welcome-section">
+    <div class="container">
+      <div class="welcome-card glass-card reveal-card">
+        <div class="card-ribbon">❤️</div>
+        <h2 class="welcome-heading">Dear Sivaranjani,</h2>
+        <p class="typewriter-text" id="welcomeText"></p>
+        <p class="welcome-sign">— <em>Guru Shankar</em> ❤️</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LOVE LETTER (envelope)
+  ============================================================ -->
+  <section id="letter" class="section letter-section">
+    <div class="container">
+      <h2 class="section-title">A Letter From My Heart</h2>
+      <div class="envelope-wrap">
+        <div class="envelope" id="envelope">
+          <div class="envelope-flap" id="envelopeFlap"></div>
+          <div class="envelope-body">
+            <div class="envelope-heart">💌</div>
+          </div>
+        </div>
+        <button class="open-letter-btn glow-btn" id="openLetterBtn">💌 Open My Letter</button>
+        <div class="letter-paper" id="letterPaper">
+          <div class="letter-inner">
+            <h3 class="letter-salutation">My Dear Sivaranjani,</h3>
+            <p>Happy Birthday ❤️</p>
+            <p>Thank you for being part of my life. Thank you for your kindness, care, support, and love.</p>
+            <p>You make ordinary moments feel extraordinary. Every conversation, every laugh, and every memory with you means a lot to me.</p>
+            <p>I wish you endless happiness, success, good health, and all your dreams coming true.</p>
+            <p>No matter where life takes us, you will always hold a special place in my heart.</p>
+            <p>On this special day, I celebrate you — the wonderful person you are and the joy you bring to everyone around you.</p>
+            <p>I know I have done my best to make you happy, and I will continue to do so.</p>
+            <p>At the same time i have done lots of mistakes, and you have been patient with me. thank you for that.</p>
+            <p>Happy Birthday once again.</p>
+            <p class="letter-love">I Love You ❤️</p>
+            <p class="letter-sign">— <em>Guru Shankar</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MEMORY GALLERY
+  ============================================================ -->
+  <section id="gallery" class="section gallery-section">
+    <div class="container">
+      <h2 class="section-title">Our Beautiful Memories 📸</h2>
+      <p class="section-sub">Every moment we shared is precious ❤️</p>
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Curated set: 3 equal images for a clear full-view layout -->
+        <div class="gallery-item" data-index="1">
+          <div class="gallery-img-wrap">
+            <img src="img/WhatsApp Image 2026-05-30 at 12.39.48 AM.jpeg" alt="Memory 1" onerror="this.parentNode.classList.add('no-img')" />
+            <div class="gallery-placeholder"><span>📸</span><p>Memory 1</p></div>
+          </div>
+          <div class="gallery-overlay"><span>Our Precious Moment ❤️</span></div>
+        </div>
+
+        <div class="gallery-item" data-index="2">
+          <div class="gallery-img-wrap">
+            <img src="img/WhatsApp Image 2026-05-30 at 12.39.49 AM (1).jpeg" alt="Memory 2" onerror="this.parentNode.classList.add('no-img')" />
+            <div class="gallery-placeholder"><span>📸</span><p>Memory 2</p></div>
+          </div>
+          <div class="gallery-overlay"><span>Beautiful Memories ❤️</span></div>
+        </div>
+
+        <div class="gallery-item" data-index="3">
+          <div class="gallery-img-wrap">
+            <img src="img/WhatsApp Image 2026-05-30 at 12.39.49 AM (2).jpeg" alt="Memory 3" onerror="this.parentNode.classList.add('no-img')" />
+            <div class="gallery-placeholder"><span>📸</span><p>Memory 3</p></div>
+          </div>
+          <div class="gallery-overlay"><span>Special Moments ❤️</span></div>
+        </div>
+
+        <!-- Only 3 curated images (featured + 2 thumbnails) for a neat layout -->
+      </div>
+    </div>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose">✕</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       REASONS I LOVE YOU
+  ============================================================ -->
+  <section id="reasons" class="section reasons-section">
+    <div class="container">
+      <h2 class="section-title">Reasons Why I Love You</h2>
+      <p class="section-sub">Let me count the ways… ❤️</p>
+      <div class="reasons-grid">
+        <div class="reason-card glass-card scroll-reveal">
+          <div class="reason-icon">❤️</div>
+          <h3>Your Beautiful Smile</h3>
+          <p>It lights up every room and melts my heart every single time.</p>
+        </div>
+        <div class="reason-card glass-card scroll-reveal">
+          <div class="reason-icon">🌸</div>
+          <h3>Your Kind Heart</h3>
+          <p>The way you care for others shows how beautiful your soul truly is.</p>
+        </div>
+        <div class="reason-card glass-card scroll-reveal">
+          <div class="reason-icon">😊</div>
+          <h3>Your Cute Expressions</h3>
+          <p>Every little expression of yours makes my world a brighter place.</p>
+        </div>
+        <div class="reason-card glass-card scroll-reveal">
+          <div class="reason-icon">🤗</div>
+          <h3>Your Support</h3>
+          <p>You are always there — in the highs, the lows, and everything between.</p>
+        </div>
+        <div class="reason-card glass-card scroll-reveal">
+          <div class="reason-icon">✨</div>
+          <h3>Your Personality</h3>
+          <p>Uniquely wonderful — there is nobody else quite like you in this world.</p>
+        </div>
+        <div class="reason-card glass-card scroll-reveal">
+          <div class="reason-icon">💖</div>
+          <h3>Everything About You</h3>
+          <p>Every little thing — your voice, your laugh, your being — I love it all.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TIMELINE
+  ============================================================ -->
+  <section id="timeline" class="section timeline-section">
+    <div class="container">
+      <h2 class="section-title">Our Journey Together 💕</h2>
+      <div class="timeline">
+        <div class="tl-item tl-left scroll-reveal">
+          <div class="tl-dot">❤️</div>
+          <div class="tl-card glass-card">
+            <h3>The Day We Met</h3>
+            <p>The universe smiled on us the day our paths crossed. That was the beginning of something extraordinary.</p>
+          </div>
+        </div>
+        <div class="tl-item tl-right scroll-reveal">
+          <div class="tl-dot">💬</div>
+          <div class="tl-card glass-card">
+            <h3>Our First Conversation</h3>
+            <p>Words that started simply and turned into something that changed everything. I knew then you were special.</p>
+          </div>
+        </div>
+        <div class="tl-item tl-left scroll-reveal">
+          <div class="tl-dot">🌹</div>
+          <div class="tl-card glass-card">
+            <h3>Our First Special Moment</h3>
+            <p>A moment I will treasure forever. It felt like the whole world paused just for us.</p>
+          </div>
+        </div>
+        <div class="tl-item tl-right scroll-reveal">
+          <div class="tl-dot">📸</div>
+          <div class="tl-card glass-card">
+            <h3>Beautiful Memories</h3>
+            <p>Every day added a new beautiful chapter — laughs, adventures, quiet moments, and everything in between.</p>
+          </div>
+        </div>
+        <div class="tl-item tl-left scroll-reveal">
+          <div class="tl-dot">🎂</div>
+          <div class="tl-card glass-card">
+            <h3>Birthday 2026 ❤️</h3>
+            <p>This day — your birthday — I celebrate the most wonderful person I have ever known. Happy Birthday, my love.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WISHES CAROUSEL
+  ============================================================ -->
+  <section id="wishes" class="section wishes-section">
+    <div class="container">
+      <h2 class="section-title">Birthday Wishes Just For You 🌸</h2>
+      <div class="carousel-wrap">
+        <div class="carousel" id="carousel">
+          <div class="carousel-slide active">
+            <div class="wish-icon">❤️</div>
+            <p class="wish-text">"You deserve all the happiness in the world ❤️"</p>
+          </div>
+          <div class="carousel-slide">
+            <div class="wish-icon">✨</div>
+            <p class="wish-text">"May your smile shine brighter every single day ✨"</p>
+          </div>
+          <div class="carousel-slide">
+            <div class="wish-icon">🌸</div>
+            <p class="wish-text">"May all your beautiful dreams come true 🌸"</p>
+          </div>
+          <div class="carousel-slide">
+            <div class="wish-icon">💖</div>
+            <p class="wish-text">"You are loved far more than you will ever know ❤️"</p>
+          </div>
+          <div class="carousel-slide">
+            <div class="wish-icon">👑</div>
+            <p class="wish-text">"Happy Birthday My Princess 👑"</p>
+          </div>
+        </div>
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MUSIC PLAYER
+  ============================================================ -->
+  <section id="music" class="section music-section">
+    <div class="container">
+      <h2 class="section-title">🎵 Our Special Song</h2>
+      <p class="section-sub">Press play and let the music fill your heart ❤️</p>
+      <div class="music-player glass-card">
+        <div class="music-vinyl" id="musicVinyl">
+          <div class="vinyl-label">❤️</div>
+        </div>
+        <div class="music-info">
+          <h3 class="song-title">Our Song</h3>
+          <p class="song-artist">A melody of love</p>
+        </div>
+        <div class="music-progress-wrap">
+          <div class="music-time" id="musicTime">0:00 / 0:00</div>
+          <div class="music-progress-bar" id="musicProgressBar">
+            <div class="music-progress-fill" id="musicProgressFill"></div>
+          </div>
+        </div>
+        <div class="music-controls">
+          <button class="music-btn" id="playPauseBtn" title="Play/Pause">
+            <span id="playIcon">▶</span>
+          </button>
+        </div>
+        <p class="music-hint">Playing: <code>This is for you my girl💙.mp4</code> ❤️</p>
+        <audio id="audioPlayer" src="love notes.mp4" preload="metadata"></audio>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INTERACTIVE HEARTS
+  ============================================================ -->
+  <section id="hearts-interactive" class="section hearts-section">
+    <div class="container">
+      <h2 class="section-title">Click The Hearts ❤️</h2>
+      <p class="section-sub">Spread the love — click anywhere below!</p>
+      <div class="hearts-canvas" id="heartsCanvas">
+        <div class="hearts-instruction">
+          <div class="big-heart" id="bigHeart">❤️</div>
+          <p>Touch or click me!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BIRTHDAY CAKE
+  ============================================================ -->
+  <section id="cake" class="section cake-section">
+    <div class="container">
+      <h2 class="section-title">Make A Wish 🎂</h2>
+      <p class="section-sub">Blow out the candles and make a birthday wish!</p>
+      <div class="cake-wrap">
+        <div class="cake-svg-wrap">
+          <svg class="cake-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Candles -->
+            <g id="candlesGroup">
+              <!-- Candle 1 -->
+              <rect x="85" y="95" width="14" height="40" rx="4" fill="#f9c6d0"/>
+              <ellipse cx="92" cy="95" rx="7" ry="3" fill="#f7a5b8"/>
+              <g class="flame" id="flame1">
+                <ellipse cx="92" cy="88" rx="5" ry="8" fill="#FFD700" opacity="0.9"/>
+                <ellipse cx="92" cy="87" rx="3" ry="5" fill="#FF6B00" opacity="0.8"/>
+              </g>
+              <!-- Candle 2 -->
+              <rect x="143" y="85" width="14" height="50" rx="4" fill="#d8b4f8"/>
+              <ellipse cx="150" cy="85" rx="7" ry="3" fill="#c084fc"/>
+              <g class="flame" id="flame2">
+                <ellipse cx="150" cy="77" rx="5" ry="8" fill="#FFD700" opacity="0.9"/>
+                <ellipse cx="150" cy="76" rx="3" ry="5" fill="#FF6B00" opacity="0.8"/>
+              </g>
+              <!-- Candle 3 -->
+              <rect x="201" y="95" width="14" height="40" rx="4" fill="#fda4af"/>
+              <ellipse cx="208" cy="95" rx="7" ry="3" fill="#fb7185"/>
+              <g class="flame" id="flame3">
+                <ellipse cx="208" cy="88" rx="5" ry="8" fill="#FFD700" opacity="0.9"/>
+                <ellipse cx="208" cy="87" rx="3" ry="5" fill="#FF6B00" opacity="0.8"/>
+              </g>
+            </g>
+            <!-- Cake layers -->
+            <rect x="55" y="135" width="190" height="55" rx="12" fill="#f9a8d4"/>
+            <rect x="55" y="135" width="190" height="14" rx="12" fill="#fbcfe8"/>
+            <!-- Frosting drips top -->
+            <path d="M55,149 Q70,165 85,149 Q100,165 115,149 Q130,165 145,149 Q160,165 175,149 Q190,165 205,149 Q220,165 235,149 Q245,149 245,149" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <!-- Middle layer -->
+            <rect x="65" y="190" width="170" height="60" rx="12" fill="#e879a0"/>
+            <rect x="65" y="190" width="170" height="14" rx="12" fill="#f9a8d4"/>
+            <!-- Frosting drips middle -->
+            <path d="M65,204 Q80,218 95,204 Q110,218 125,204 Q140,218 155,204 Q170,218 185,204 Q200,218 215,204 Q230,218 235,204" stroke="#fbcfe8" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <!-- Bottom plate -->
+            <ellipse cx="150" cy="252" rx="110" ry="14" fill="#dda0dd" opacity="0.4"/>
+            <!-- Decorations -->
+            <text x="90" y="175" font-size="16" fill="white" opacity="0.8">🌸</text>
+            <text x="145" y="172" font-size="14" fill="white" opacity="0.9">❤️</text>
+            <text x="195" y="175" font-size="16" fill="white" opacity="0.8">🌸</text>
+            <text x="110" y="228" font-size="12" fill="white" opacity="0.8">Happy Birthday</text>
+            <text x="160" y="242" font-size="11" fill="white" opacity="0.8">Sivaranjani ❤️</text>
+          </svg>
+          <!-- Extinguish overlay -->
+          <div class="smoke-wrap" id="smokeWrap" style="display:none;">
+            <div class="smoke"></div><div class="smoke"></div><div class="smoke"></div>
+          </div>
+        </div>
+        <button class="glow-btn cake-btn" id="blowCandlesBtn">🎂 Blow The Candles</button>
+        <div class="wish-reveal" id="wishReveal" style="display:none;">
+          <p>🌟 Make A Birthday Wish ❤️ 🌟</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FINAL SURPRISE
+  ============================================================ -->
+  <section id="surprise" class="section surprise-section">
+    <div class="container">
+      <h2 class="section-title">One Last Thing… 🎁</h2>
+      <p class="section-sub">I saved the best for last ❤️</p>
+      <button class="glow-btn big-surprise-btn" id="surpriseBtn">
+        🎁 Open Your Birthday Surprise
+      </button>
+    </div>
+  </section>
+
+  <!-- FULL SCREEN SURPRISE OVERLAY -->
+  <div class="surprise-overlay" id="surpriseOverlay">
+    <canvas class="confetti-canvas" id="confettiCanvas"></canvas>
+    <div class="surprise-fireworks" id="surpriseFireworks"></div>
+    <div class="surprise-content">
+      <div class="surprise-emoji">🎉❤️🎂</div>
+      <h1 class="surprise-title">Happy Birthday</h1>
+      <h2 class="surprise-name">Sivaranjani ❤️</h2>
+      <div class="surprise-message">
+        <p>You are one of the most precious people in my life.</p>
+        <p>Thank you for every smile, every memory, and every beautiful moment.</p>
+        <p>May your life be filled with happiness, success, love, and endless blessings.</p>
+        <p>I hope today brings you everything your heart desires.</p>
+        <p>You deserve the very best. 🌸</p>
+        <p class="surprise-love">I Love You Forever ❤️</p>
+        <p class="surprise-sign">— <em>Guru Shankar</em></p>
+      </div>
+      <button class="glow-btn close-surprise-btn" id="closeSurpriseBtn">
+        💖 Send me your love!
+      </button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="footer-hearts">❤️ 🌸 ❤️</div>
+    <p class="footer-text">Made with <span class="footer-heart-anim">❤️</span> by <strong>Guru Shankar</strong></p>
+    <p class="footer-sub">Happy Birthday <strong>Sivaranjani</strong> ❤️</p>
+    <p class="footer-year">2026 — A Year Full of Love & Joy 🌸</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
